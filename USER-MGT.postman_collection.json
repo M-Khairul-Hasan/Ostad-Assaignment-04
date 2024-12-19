@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "b27ba7ed-e8e1-469b-bec6-3ae1cbde8097",
+		"name": "USER-MGT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38168042"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"khairul.hx@gmail.com\",\r\n    \"password\":\"12345\",\r\n    \"firstName\": \"KH Shanto\",\r\n    \"lastName\": \"HS\",\r\n    \"NIDNumber\": \"1212\",\r\n    \"phoneNumber\": \"0177\",\r\n    \"bloodGroup\": \"A+\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/UserRegistration",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"UserRegistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"khairul.hx@gmal.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/UserLogin",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"UserLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/ReadProfile",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"ReadProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadAllProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/ReadAllProfile",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"ReadAllProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"456\",\r\n\"firstName\": \"KH Shanto 2\",\r\n\"lastName\": \"HS\",\r\n\"NIDNumber\": \"oo1212\",\r\n\"phoneNumber\": \"0177 0\",\r\n\"bloodGroup\": \"A+\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/UpdateProfile",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"UpdateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserDelete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"khairul.hx@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseURL}}/UserDelete",
+							"host": [
+								"{{BaseURL}}"
+							],
+							"path": [
+								"UserDelete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "http://localhost:3001/api/v1",
+			"type": "string"
+		}
+	]
+}
